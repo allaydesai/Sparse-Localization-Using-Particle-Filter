@@ -67,9 +67,9 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
 
 	// Create gaussian noise
 	default_random_engine gen;
-	normal_distribution<double> dist_x(x, std[0]);
-	normal_distribution<double> dist_y(y, std[1]);
-	normal_distribution<double> dist_theta(theta, std[2]);
+	normal_distribution<double> dist_x(0, std_pos[0]);
+	normal_distribution<double> dist_y(0, std_pos[1]);
+	normal_distribution<double> dist_theta(0, std_pos[2]);
 
 	// Add measurements to each particle
 	for (int i=0; i<num_particles; i++)
