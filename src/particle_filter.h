@@ -115,6 +115,7 @@ public:
 	const bool initialized() const {
 		return is_initialized;
 	}
+
 };
 
 
