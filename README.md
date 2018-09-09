@@ -15,6 +15,7 @@ Overview
 [eq_1]: ./images/equation_1.gif "Equation 1"
 [eq_2]: ./images/equation_2.gif "Equation 2"
 [eq_3]: ./images/equation_3.gif "Equation 3"
+[eq_4]: ./images/equation_4.gif "Equation 4"
 
 **PROJECT DESCRIPTION**
 
@@ -178,11 +179,16 @@ You can find the inputs to the particle filter in the `data` directory.
 
 ## Important Equations
 1. Transformation from Vehicle coordinates to Map coordinates
+
 ![alt text][eq_1]
+
 ![alt text][eq_2]
 
-2. Multivariate Gaussian Probability Density
 ![alt text][eq_3]
+
+2. Multivariate Gaussian Probability Density
+
+![alt text][eq_4]
 
 # Result
 
