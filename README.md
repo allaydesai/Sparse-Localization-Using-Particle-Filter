@@ -12,6 +12,9 @@ Overview
 
 [video]: ./images/particle_output.gif "Video showing tracking performance"
 [final_result]: ./images/particle_sim_result.PNG "Final Result"
+[eq_1]: ./images/equation_1.gif "Equation 1"
+[eq_2]: ./images/equation_2.gif "Equation 2"
+[eq_3]: ./images/equation_3.gif "Equation 3"
 
 **PROJECT DESCRIPTION**
 
@@ -98,6 +101,12 @@ Once the install for uWebSocketIO is complete, the main program can be built and
 
 # Implementing the Particle Filter
 
+The implementation is broken into the following steps:
+1. Transform observations from vehicle to map coordinates
+2. Find closest landmarks using nearest neighbour algorithm
+3. Update weight of the particle using multivariate gaussian probability density function
+4. Resample set of particles based on their weights/probability
+
 ## Interaction with simulator
 
 Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
@@ -167,8 +176,17 @@ You can find the inputs to the particle filter in the `data` directory.
 
 > * Map data provided by 3D Mapping Solutions GmbH.
 
-# Result
-If your particle filter passes the current grading code in the simulator (you can make sure you have the current version at any time by doing a `git pull`), then you should pass!
+## Important Equations
+1. Transformation from Vehicle coordinates to Map coordinates
+![alt text][eq_1]
+![alt text][eq_2]
 
-The things the grading code is looking for are:
+2. Multivariate Gaussian Probability Density
+![alt text][eq_3]
+
+# Result
+
+The vehicle was succesfully localized.
+
+![alt text][final_result]
 
